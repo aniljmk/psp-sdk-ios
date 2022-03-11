@@ -112,7 +112,7 @@ interval = 6
 payment will be deduct every six month
 
 
-# Add Delegate methods to ViewControlelr
+# Add Delegate methods to ViewControler
 ```sh
  func paymentDoneWith(success: Bool, data: [String : Any]?)
  ```
