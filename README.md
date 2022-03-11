@@ -91,22 +91,26 @@ let param : [String:Any] =
         ]
 ```
 here if you choose subscription_plan = 3 and interval = 1 then it means your subscription is per month
+
 lets have another example 
+---------------
+
 subscription = 3
 interval = 3
-
 payment will be deduct every 3 months
--------
+
+OR 
+
 subscription = 4
 interval = 1
-
 payment will be deduct yearly
---------------
+
+OR
+
 subscription = 5
 interval = 6
-
 payment will be deduct every six month
--------------
+
 
 # Add Delegate methods to ViewControlelr
 ```sh
