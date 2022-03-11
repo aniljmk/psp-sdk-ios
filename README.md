@@ -39,7 +39,7 @@ let obj = OminiPay.initWith(key: “Your OminiPa’sy Account key”)
 
 obj.delegate = self
 
-# Call CheckoutMethod
+# Call CheckoutMethod For Simple Payment
 
 ```sh
  obj.checkOutRequestWith(param)
@@ -63,6 +63,50 @@ let param = [
     "card_type" : "C"
 ]
 ```
+
+# For Subscription call method 'subscriptionRequestWith(_)'
+
+```sh
+ obj.subscriptionRequestWith(param)
+```
+
+**Note:** param is the variable in which you set your subscription details along with your card:
+
+## Parameter Sample Formate
+
+```sh
+let param : [String:Any] =
+        ["name":"Raj",
+         "email":"raj@mailiinator.com",
+         "amount":10.00,
+         "currency":"SAR",
+         "order_id":420,
+         "card_number":"5105105105105100",
+         "exp_month":"12",
+         "exp_year":"23",
+         "cvv":"999",
+         "remark":"This payment is done by card ios",
+         "subscription_plan" : "1", //{1=>daily, 2=>weekly, 3=>monthly, 4=>yearly}
+         "interval" : "1",
+        ]
+```
+here if you choose subscription_plan = 3 and interval = 1 then it means your subscription is per month
+lets have another example 
+subscription = 3
+interval = 3
+
+payment will be deduct every 3 months
+-------
+subscription = 4
+interval = 1
+
+payment will be deduct yearly
+--------------
+subscription = 5
+interval = 6
+
+payment will be deduct every six month
+-------------
 
 # Add Delegate methods to ViewControlelr
 ```sh
