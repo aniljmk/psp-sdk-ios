@@ -111,6 +111,16 @@ subscription = 5
 interval = 6
 payment will be deduct every six month
 
+# For Cancel Subscription call method 'cancelSubscriptionRequestWith(_)'
+
+```sh
+ obj.cancelSubscriptionRequestWith(param)
+```
+
+## Parameter Sample Formate
+```sh
+let cancelParam:[String:Any] = ["user_id":"2"]
+```
 
 # Add Delegate methods to ViewControler
 ```sh
